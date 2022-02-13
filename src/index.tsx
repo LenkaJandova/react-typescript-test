@@ -6,6 +6,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Expenses from './routes/expenses';
 import Invoices from './routes/invoices';
+import Main from './routes/main';
+
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +17,7 @@ ReactDOM.render(
       <Route path="/" element={<App />} />
       <Route path="expenses" element={<Expenses />} />
       <Route path="invoices" element={<Invoices />} />
+      <Route path="main" element={<Main />} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>,
