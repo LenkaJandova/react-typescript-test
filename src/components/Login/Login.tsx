@@ -1,5 +1,5 @@
 import './Login.css'
-import { checkCredentials } from './functions/login'
+import { checkCredentials } from '../../functions/login'
 import {
   Button,
   Container,
@@ -29,6 +29,14 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   
+  function performLogin(){
+    if(checkCredentials(username,password)){
+      navigate("/main");
+    } else{
+      alert(`username: ${username}, password: ${password}`)//TODO na mui najit boxik a nastavime do statu tyhle componenty novou property "error message"
+    }
+  }
+
   return (
     <div className="Login">
       <Item>

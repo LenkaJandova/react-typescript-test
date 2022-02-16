@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import { Button, Container, Grid, Paper, styled, TextField } from '@mui/material'
 import { Box } from '@mui/system'
-import Login from './Login';
+import Login from '../../components/Login/Login';
 import { Link } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -22,8 +22,8 @@ function App() {
           paddingBottom: "1rem"
         }}
       >
-        <Link to="/invoices">Invoices</Link> |{" "}
-        <Link to="/expenses">Expenses</Link>
+        <Link to="../Invoices/invoices">Invoices</Link> |{" "}
+        <Link to="../Expenses/expenses">Expenses</Link>
       </nav>
         <Login/>
       </header>

@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './index.css';
-import App from './App';
+import App from './routes/App/App';
 import reportWebVitals from './reportWebVitals';
-import Expenses from './routes/expenses';
-import Invoices from './routes/invoices';
-import Main from './routes/main';
+import Expenses from './routes/Expenses/expenses';
+import Invoices from './routes/Invoices/invoices';
+import Main from './routes/Main/main';
 
 
 
