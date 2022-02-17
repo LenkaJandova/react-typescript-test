@@ -1,7 +1,10 @@
-export default function Main() {
-    return (
-      <main style={{ padding: "1rem 0" }}>
-        <h2>Main</h2>
+import Navbar from "../../components/Navbar/Navbar"
+
+export const Main = () => {
+  return (
+
+    <main style={{ padding: "1rem 0" }}>
+        <Navbar/>
       </main>
-    );
-  }
+  )
+}  

@@ -11,7 +11,7 @@ import {
 import { Box } from '@mui/system'
 
 import { useNavigate } from "react-router-dom"
-import { useState } from 'react'
+import { MouseEventHandler, useState } from 'react'
 import { CLIENT_RENEG_LIMIT } from 'tls'
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -22,14 +22,13 @@ const Item = styled(Paper)(({ theme }) => ({
 }))
 
 
-
 function Login() {
   
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   
-  function performLogin(){
+  const performLogin: React.MouseEventHandler<HTMLButtonElement> = (event) => {
     if(checkCredentials(username,password)){
       navigate("/main");
     } else{
@@ -69,15 +68,7 @@ function Login() {
             <Grid item xs={12}>
               <Button
                 variant="contained"
-                onClick={() => {
-                  
-                  if(checkCredentials(username,password)){
-                    navigate("/main");
-                  } else{
-                    alert(`username: ${username}, password: ${password}`)//TODO na mui najit boxik a nastavime do statu tyhle componenty novou property "error message"
-                  }
-                  
-                }}
+                onClick={performLogin}
               >
                 Butonek
               </Button>

@@ -6,7 +6,7 @@ import App from './routes/App/App';
 import reportWebVitals from './reportWebVitals';
 import Expenses from './routes/Expenses/expenses';
 import Invoices from './routes/Invoices/invoices';
-import Main from './routes/Main/main';
+import { Main } from './routes/Main/main';
 
 
 
